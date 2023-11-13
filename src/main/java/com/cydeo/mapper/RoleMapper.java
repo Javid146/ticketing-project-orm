@@ -10,7 +10,7 @@ public class RoleMapper {
 
     private final ModelMapper modelMapper;
 
-    public RoleMapper(ModelMapper modelMapper) {
+    public RoleMapper(ModelMapper  modelMapper) {
         this.modelMapper = modelMapper;
     }
 
