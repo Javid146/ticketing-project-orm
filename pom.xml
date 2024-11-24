@@ -52,6 +52,7 @@
 			<scope>test</scope>
 		</dependency>
 
+<!--		todo mapper is used to convert db (Entity) to DTO-->
 		<dependency>
 			<groupId>org.modelmapper</groupId>
 			<artifactId>modelmapper</artifactId>

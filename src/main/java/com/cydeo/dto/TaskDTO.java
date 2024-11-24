@@ -20,24 +20,22 @@ public class TaskDTO {
 
     @NotNull
     private UserDTO assignedEmployee;
-
     @NotBlank
     private String taskSubject;
-
     @NotBlank
     private String taskDetail;
 
     private Status taskStatus;
     private LocalDate assignedDate;
 
-    public TaskDTO(ProjectDTO project, UserDTO assignedEmployee, String taskSubject, String taskDetail, Status taskStatus, LocalDate assignedDate) {
-        this.project = project;
-        this.assignedEmployee = assignedEmployee;
-        this.taskSubject = taskSubject;
-        this.taskDetail = taskDetail;
-        this.taskStatus = taskStatus;
-        this.assignedDate = assignedDate;
-        this.id = UUID.randomUUID().getMostSignificantBits();
-    }
+//    public TaskDTO(ProjectDTO project, UserDTO assignedEmployee, String taskSubject, String taskDetail, Status taskStatus, LocalDate assignedDate) {
+//        this.project = project;
+//        this.assignedEmployee = assignedEmployee;
+//        this.taskSubject = taskSubject;
+//        this.taskDetail = taskDetail;
+//        this.taskStatus = taskStatus;
+//        this.assignedDate = assignedDate;
+//        this.id = UUID.randomUUID().getMostSignificantBits();
+//    }
 
 }

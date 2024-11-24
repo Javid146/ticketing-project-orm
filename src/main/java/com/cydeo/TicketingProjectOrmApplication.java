@@ -12,7 +12,8 @@ public class TicketingProjectOrmApplication {
 		SpringApplication.run(TicketingProjectOrmApplication.class, args);
 	}
 
-	@Bean
+	@Bean //todo ModelMapper is a 3rd party class we added with dependency therefore it is written here with @Bean annot
+	//but we do not use this structure at real job, in real job you create configuration package for it.
 	public ModelMapper mapper(){
 		return new ModelMapper();
 	}

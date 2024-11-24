@@ -2,6 +2,7 @@ package com.cydeo.dto;
 
 import com.cydeo.enums.Gender;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
@@ -10,7 +11,10 @@ import javax.validation.constraints.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Data //for getter and setter
 public class UserDTO {
+
+    private Long id;
 
     @NotBlank
     @Size(max = 15, min = 2)
@@ -21,7 +25,7 @@ public class UserDTO {
     private String lastName;
 
     @NotBlank
-    @Email
+//    @Email
     private String userName;
 
     @NotBlank
@@ -34,7 +38,7 @@ public class UserDTO {
     private boolean enabled;
 
     @NotBlank
-    @Pattern(regexp = "^\\d{10}$")
+//    @Pattern(regexp = "^\\d{10}$")
     private String phone;
 
     @NotNull
@@ -42,24 +46,6 @@ public class UserDTO {
 
     @NotNull
     private Gender gender;
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-        checkConfirmPassWord();
-    }
-
-    public String getConfirmPassWord() {
-        return confirmPassWord;
-    }
-
-    public void setConfirmPassWord(String confirmPassWord) {
-        this.confirmPassWord = confirmPassWord;
-        checkConfirmPassWord();
-    }
 
     private void checkConfirmPassWord() {
         if(this.passWord == null || this.confirmPassWord == null){
@@ -69,60 +55,78 @@ public class UserDTO {
         }
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
+//    public String getPassWord() {
+//        return passWord;
+//    }
+//
+//    public void setPassWord(String passWord) {
+//        this.passWord = passWord;
+//        checkConfirmPassWord();
+//    }
+//
+//    public String getConfirmPassWord() {
+//        return confirmPassWord;
+//    }
+//
+//    public void setConfirmPassWord(String confirmPassWord) {
+//        this.confirmPassWord = confirmPassWord;
+//        checkConfirmPassWord();
+//    }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public boolean isEnabled() {
-        return enabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        this.enabled = enabled;
-    }
-
-    public String getPhone() {
-        return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    public RoleDTO getRole() {
-        return role;
-    }
-
-    public void setRole(RoleDTO role) {
-        this.role = role;
-    }
-
-    public Gender getGender() {
-        return gender;
-    }
-
-    public void setGender(Gender gender) {
-        this.gender = gender;
-    }
+//    public String getFirstName() {
+//        return firstName;
+//    }
+//
+//    public void setFirstName(String firstName) {
+//        this.firstName = firstName;
+//    }
+//
+//    public String getLastName() {
+//        return lastName;
+//    }
+//
+//    public void setLastName(String lastName) {
+//        this.lastName = lastName;
+//    }
+//
+//    public String getUserName() {
+//        return userName;
+//    }
+//
+//    public void setUserName(String userName) {
+//        this.userName = userName;
+//    }
+//
+//    public boolean isEnabled() {
+//        return enabled;
+//    }
+//
+//    public void setEnabled(boolean enabled) {
+//        this.enabled = enabled;
+//    }
+//
+//    public String getPhone() {
+//        return phone;
+//    }
+//
+//    public void setPhone(String phone) {
+//        this.phone = phone;
+//    }
+//
+//    public RoleDTO getRole() {
+//        return role;
+//    }
+//
+//    public void setRole(RoleDTO role) {
+//        this.role = role;
+//    }
+//
+//    public Gender getGender() {
+//        return gender;
+//    }
+//
+//    public void setGender(Gender gender) {
+//        this.gender = gender;
+//    }
 
 }

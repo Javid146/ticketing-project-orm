@@ -15,6 +15,8 @@ import java.time.LocalDate;
 @Data
 public class ProjectDTO {
 
+    private Long id;
+
     @NotBlank
     private String projectName;
 
@@ -34,9 +36,7 @@ public class ProjectDTO {
 
     @NotBlank
     private String projectDetail;
-
     private Status projectStatus;
-
     private int completeTaskCounts;
     private int unfinishedTaskCounts;
 
